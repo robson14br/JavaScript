@@ -13,4 +13,5 @@ do {
 var c = 1
 do {
     console.log(`${c} indizinhos`)
-}while (c <= 10)
+    c++
+}while (c <= 5)
