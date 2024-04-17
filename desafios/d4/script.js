@@ -1,18 +1,4 @@
-/*function comprar(){
-    let produto = window.prompt('Qual o produto adiquirido')
-    let preco = window.prompt('Qual o valor do produto')
-    let meuDinheiro = window.prompt('Quanto em dinheiro deu para pagar o produto')
-    
-    if ( produto  <= 0) {
-        window.alert('Digite por favor')
 
-    } else{
-        window.alert(`Voce comprou um  que custou ${preco}.
-        Deu ${meuDinheiro} e vai receber de troco ${meuDinheiro-preco}
-        Volte sempre!`)
-     }
-}
-*/
   
 function comprar() {
     let produto = window.prompt('Qual o produto adquirido?');
