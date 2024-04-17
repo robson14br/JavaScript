@@ -23,3 +23,10 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+#button input{
+    font: normal 20pt Arial;
+    height: 80px;
+    background-color: rgb(255, 208, 0);
+    margin-left: 150px;
+}
