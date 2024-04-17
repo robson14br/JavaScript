@@ -23,3 +23,16 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font: normal 20pt Arial;
+    height: 55px;
+}
+   
+

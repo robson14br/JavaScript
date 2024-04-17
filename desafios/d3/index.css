@@ -23,3 +23,16 @@ footer {
     text-align: center;
     font-style: italic;
 }
+
+input {
+    height: 100px;
+   font: normal 20pt Arial;
+ 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Altura da div */
+    border: 1px solid #000; /*Apenas para visualização */
