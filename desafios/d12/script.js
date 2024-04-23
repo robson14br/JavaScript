@@ -1,14 +1,25 @@
-function desconto() {
-    let produto = prompt('Qual produto esta comprando?')
-    let valor = parseFloat(prompt('Qual o valor do produto?'))
-    if (isNaN(valor)){
-        alert('Coloque um valor valido do produto')
+function verificar() {
+    let preçoAnterior = parseFloat(prompt('Quanto o produto custava?'))
+    let preçoAtual = parseFloat(prompt('Quanto o produto custa hoje?'))
+    let diferença = preçoAtual - preçoAnterior;
+    let porcentagem = (diferença / preçoAnterior) * 100;
+    if (isNaN(preçoAnterior , preçoAtual)) {
+        alert('Favor digitar um numero valido')
         return;
     }
-    let promoçao = valor / 10
-    
-    res.innerHTML = (`O preço original era de R$ ${valor.toFixed(2)}, <br>
-    Voce acaba de ganhar um desconto de ${promoçao.toFixed(2)}R$ nos 10% de desconto. <br>
-    No fim, voce acaba de pagar ${(valor - promoçao).toFixed(2)} no produto ${produto}.`)
+
+    if (preçoAnterior > preçoAtual ) {
+        diferença = preçoAnterior - preçoAtual;
+        porcentagem = -porcentagem;
+        res.innerHTML = (`<p>Analisando os valores informados<br>
+        O produto custava R$ ${preçoAnterior.toFixed(2)} e agora custa R$ ${preçoAtual.toFixed(2)}.<br>
+        O preço caiu R$ ${diferença.toFixed(2)} em relaçao ao preço anterior.<br>
+        Uma variaçao de ${porcentagem.toFixed(2)}% pra baixo `);
+    } else {
+        res.innerHTML = (`<p>Analisando os valores informados<br>
+        O produto custava R$ ${preçoAnterior.toFixed(2)} e agora custa R$ ${preçoAtual.toFixed(2)}.<br>
+        O preço subiu R$ ${diferença.toFixed(2)} em relaçao ao preço anterior.<br>
+        Uma variaçao de ${porcentagem.toFixed(2)}% pra cima `);
+    }
+
 }
-    

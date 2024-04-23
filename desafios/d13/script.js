@@ -1,14 +1,23 @@
-function desconto() {
-    let produto = prompt('Qual produto esta comprando?')
-    let valor = parseFloat(prompt('Qual o valor do produto?'))
-    if (isNaN(valor)){
-        alert('Coloque um valor valido do produto')
-        return;
+function notas() {
+    let nome = prompt('Qual e o nome do aluno(a)')
+    let nota1 = parseFloat(prompt(`Qual sua primeira nota ${nome}`))
+    let nota2 = parseFloat(prompt(`Qual sua primeira nota ${nome}`))
+    if (isNaN(nota1 , nota2)){
+        alert('Favor digitar notas validas')
     }
-    let promoçao = valor / 10
-    
-    res.innerHTML = (`O preço original era de R$ ${valor.toFixed(2)}, <br>
-    Voce acaba de ganhar um desconto de ${promoçao.toFixed(2)}R$ nos 10% de desconto. <br>
-    No fim, voce acaba de pagar ${(valor - promoçao).toFixed(2)} no produto ${produto}.`)
-}
-    
+    let media = (nota1 + nota2)/2
+    if (media < 3) {
+        res.innerHTML = (`<p>Analizando a situaçao de ${nome}<br>
+        Com as notas ${nota1} e ${nota2} a media é ${media}
+        Com a media acima de ${media}, o aluno esta <strong>REPROVADO</strong></p>.`)
+        
+    } else if (media >= 3 && media <= 6) {
+        res.innerHTML = (`<p>Analizando a situaçao de ${nome}<br>
+        Com as notas ${nota1} e ${nota2} a media é ${media}
+        Com a media acima de ${media}, o aluno esta <strong>RECUPERAÇAO</strong></p>.`)
+    } else {
+        res.innerHTML = (`<p>Analizando a situaçao de ${nome}<br>
+        Com as notas ${nota1} e ${nota2} a media é ${media}
+        Com a media acima de ${media}, o aluno esta <strong>APROVADO</strong></p>.`)
+    }
+} 
