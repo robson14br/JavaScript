@@ -1,14 +1,12 @@
-function desconto() {
-    let produto = prompt('Qual produto esta comprando?')
-    let valor = parseFloat(prompt('Qual o valor do produto?'))
-    if (isNaN(valor)){
-        alert('Coloque um valor valido do produto')
-        return;
+function anoBissexto () {
+    let pergAno = parseFloat(prompt('Que ano quer pesquisar?'))
+    if (isNaN(pergAno)) {
+    alert('Por favor digite um numero valido')
+    return;}
+    if ((pergAno % 4 === 0 && pergAno % 100 !== 0) || (pergAno % 400 === 0)) {
+        res.innerHTML = `É um ano bissexto!!`
+
+    } else {
+        res.innerHTML = `Nao e um ano bissexto!!`
     }
-    let promoçao = valor / 10
-    
-    res.innerHTML = (`O preço original era de R$ ${valor.toFixed(2)}, <br>
-    Voce acaba de ganhar um desconto de ${promoçao.toFixed(2)}R$ nos 10% de desconto. <br>
-    No fim, voce acaba de pagar ${(valor - promoçao).toFixed(2)} no produto ${produto}.`)
 }
-    
